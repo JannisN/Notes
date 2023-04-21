@@ -1,17 +1,42 @@
 \documentclass[twocolumn]{article}
 \usepackage[a4paper, total={7in, 10in}]{geometry}
+\usepackage{amsthm}
+\usepackage{enumitem}
+
+\theoremstyle{definition}
+\newtheorem{definition}{Definition}[section]
+\newtheorem{theorem}[definition]{Theorem}
+\newtheorem{lemma}[definition]{Lemma}
+
 \begin{document}
-\textbf{Hello world!}
-blabla\ref{eq1}
-\section{Bla}
-Hello, here is some text without a meaning... 
-Now, we are adding some text here to understand how multiple columns will come up.
-This way, we hope that you are understanding the multicols package and its usage.
-The text that we have placed here is only for sample.
-This is again some new text here. Just to show you how the..
-text is getting placed…..
-hallo
-T
-tes
+
+\section{General Topology}
+\begin{definition}[Topology]
+    A topological space is a set $X$ with a collection of subsets $\mathcal{U}$, called open sets, such that
+    \setlist{nolistsep}
+    \begin{enumerate}[noitemsep]
+        \item $\emptyset, X \in \mathcal{U}$.
+        \item The arbitrary union of open sets is open.
+        \item The finite union of open sets is open.
+    \end{enumerate}
+    The complement $X - U$ of an open set $U$ is called closed.
+\end{definition}
+\begin{definition}
+    Let $(X, \mathcal{U})$, $(X, \mathcal{V})$ be topologies.
+    $\mathcal{U}$ is called stronger(finer) than $\mathcal{V}$ if $\mathcal{V} \in \mathcal{U}$,
+    and weaker(coarser) if $\mathcal{V} \in \mathcal{U}$.
+\end{definition}
+\begin{definition}
+    A basis $\mathcal{B}$ of a topology for $X$ is a collection of subsets of $X$ such that
+    \setlist{nolistsep}
+    \begin{enumerate}[noitemsep]
+        \item For each $x \in X$ there is at least one $B \in \mathcal{B}$ with $x \in B$.
+        \item If $x \in B_1 \cap B_2$ then there exists a $B_3 \subset B_1 \cap B_2$ with $x \in B$.
+    \end{enumerate}
+    We say that $\mathcal{B}$ generates the topology $\mathcal{U}$ if $U$ is open iff for every $x \in U$ there exits $B \in \mathcal{B}$ with $x \in B \subset U$.
+\end{definition}
+\begin{lemma}
+    bla
+\end{lemma}
 
 \end{document}
