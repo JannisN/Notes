@@ -1,5 +1,5 @@
 \documentclass[twocolumn]{article}
-\usepackage[a4paper, total={7in, 10in}]{geometry}
+\usepackage[a4paper, total={7.5in, 10.7in}]{geometry}
 \usepackage{amsthm}
 \usepackage{enumitem}
 
@@ -78,5 +78,37 @@
         \cup \{ \pi_2^{-1}(V) \, | \, V \in Y \,\textrm{open} \}.
     \end{equation}
 \end{theorem}
+\begin{definition}
+    For $(X, \mathcal{U})$ and $Y \subset X$, the subspace topology $\mathcal{V}$ on $Y$ is defined as
+    \begin{equation}
+        \mathcal{V} = \{ Y \cap U \, | \, U \in \mathcal{U} \}.
+    \end{equation}
+\end{definition}
+\begin{lemma}
+    If $\mathcal{B}$ is a basis for $X$ then the following is a basis for $Y$:
+    \begin{equation}
+        \{ B \cap Y \, | \, B \in \mathcal{B} \}.
+    \end{equation}
+\end{lemma}
+\begin{lemma}
+    Let $Y$ be a subspace of X. If $U$ is open in $Y$ and $Y$ is open in X, then $U$ is open in X.
+\end{lemma}
+\begin{theorem}
+    Let $A$, $B$ be subspaces of $X$, $Y$ respectively, then the product topology on $A \times B$ is
+    equal the subspace topology $A \times B$ inherits from $X \times Y$.
+\end{theorem}
+\begin{theorem}
+    Arbitrary intersections and finite unions of closed sets are closed.
+\end{theorem}
+\begin{theorem}
+    If $Y$ is a subspace of $X$, then a set is closed in $Y$ iff it equals the intersection of a closed set in $X$ with $Y$.
+\end{theorem}
+\begin{theorem}
+    If $Y$ is a subspace of $X$, $A$ is closed in $Y$ and $Y$ is closed in $X$, then $A$ is closed in $X$.
+\end{theorem}
+\begin{definition}
+    For $A$ a subset of $X$, the closure $\overline{A}$ of $A$ is defined as the intersection of all closed sets containing $A$,
+    the interior of $A$ is defined as the union of all sets contained in $A$.
+\end{definition}
 
 \end{document}
