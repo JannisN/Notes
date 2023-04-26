@@ -19,7 +19,7 @@
         \item The arbitrary union of open sets is open.
         \item The finite union of open sets is open.
     \end{enumerate}
-    The complement $X - U$ of an open set $U$ is called closed.
+    The complement $X - U$ of an open set $U$ is called closed. If $x \in U$ open, then $U$ is called a neighborhood of $x$. Sometimes a non open set $A \supset U$ is also referred to as a neighborhood.
 \end{definition}
 \begin{definition}
     Let $(X, \mathcal{U})$, $(X, \mathcal{V})$ be topologies.
@@ -107,8 +107,20 @@
     If $Y$ is a subspace of $X$, $A$ is closed in $Y$ and $Y$ is closed in $X$, then $A$ is closed in $X$.
 \end{theorem}
 \begin{definition}
-    For $A$ a subset of $X$, the closure $\overline{A}$ of $A$ is defined as the intersection of all closed sets containing $A$,
-    the interior of $A$ is defined as the union of all sets contained in $A$.
+    For $A$ a subset of $X$, the closure $\overline{A}_X$ of $A$(in $X$) is defined as the intersection of all closed sets containing $A$,
+    the interior of $A$ is defined as the union of all open sets contained in $A$.
 \end{definition}
+\begin{theorem}
+    Let $Y$ be a subspace of $X$, $A$ a subset of $Y$. Then $\overline{A}_Y = \overline{A}_X \cap Y$.
+\end{theorem}
+
+\begin{theorem}
+    Let $A$ be a subset of $X$.
+    \setlist{nolistsep}
+    \begin{enumerate}[noitemsep]
+        \item Then $x \in \overline{A}$ iff every open set containing $x$ intersects $A$.
+        \item If $X$ is given by a basis, then $x \in \overline{A}$ iff every basis element containing x intersects $A$.
+    \end{enumerate}
+\end{theorem}
 
 \end{document}
