@@ -1,0 +1,61 @@
+\documentclass[twocolumn]{article}
+\usepackage[a4paper, total={7.5in, 10.7in}]{geometry}
+\usepackage{amsthm}
+\usepackage{amssymb}
+\usepackage{enumitem}
+
+\theoremstyle{definition}
+\newtheorem{definition}{Definition}[section]
+\newtheorem{theorem}[definition]{Theorem}
+\newtheorem{lemma}[definition]{Lemma}
+\newtheorem{proposition}[definition]{Proposition}
+
+\begin{document}
+
+\section{Algebraic Topology}
+\begin{definition}[de Rham complex]
+    $\Omega^*$ is the algebra generated over $\mathbb{R}$ by $dx_1, \dots, dx_n$ subject to
+    \setlist{nolistsep}
+    \begin{enumerate}[noitemsep]
+        \item $(dx_i)^2 = 0$,
+        \item $dx_i dx_j = -dx_j dx_i, i \neq j$.
+    \end{enumerate}
+    The $C^\infty$ differential forms on $\mathbb{R}$ are elements of
+    \begin{equation}
+        \Omega^*(\mathbb{R}^n) = \{ C^\infty \textrm{ functions on } \mathbb{R}^n \} \otimes_\mathbb{R} \Omega^*.
+    \end{equation}
+    We have $\Omega^*(\mathbb{R}^n) = \oplus^n_{q=0} \Omega^q(\mathbb{R}^n)$,
+    where $\Omega^q(\mathbb{R}^n)$ consists of the $C^\infty$ $q$-forms on $\mathbb{R}^n$. We define
+    \begin{equation}
+        d : \Omega^q(\mathbb{R}^n) \rightarrow \Omega^{q+1}(\mathbb{R}^n),
+    \end{equation}
+    the exterior differentiation, by
+    \setlist{nolistsep}
+    \begin{enumerate}[noitemsep]
+        \item if $f \in \Omega^0(\mathbb{R}^n)$, then $df = \sum \partial f / \partial x_i \, dx_i$,
+        \item if $\omega = \sum f_I dx_I$, then $d\omega = \sum df_I dx_I$, where $dx_I = dx_i dx_j \dots $.
+    \end{enumerate}
+    The wedge product is defined by
+    \begin{equation}
+        \tau \wedge \omega = \sum \tau_I \omega_J \, dx_I dx_J = (-1)^{\mathrm{deg }\tau\,\mathrm{deg }\omega} \omega \wedge \tau.
+    \end{equation}
+\end{definition}
+\begin{proposition}
+    $d$ is an antiderivation,
+    \begin{equation}
+        d(\tau \wedge \omega) = (d\tau) \wedge \omega + (-1)^{\mathrm{deg} \tau} \tau \wedge d\omega.
+    \end{equation}
+\end{proposition}
+\begin{proposition}
+    $d^2 = 0$.
+\end{proposition}
+\begin{definition}
+    The $q$-th de Rham cohomology of $\mathbb{R}^n$ is the vector space
+    \begin{equation}
+        H^q(\mathbb{R}^n) = \{\textrm{closed $q$-forms}\}/\{\textrm{exact $q$-forms}\},
+    \end{equation}
+    where closed means in the kernel of $d$ and exact means in the image of $d$.
+    We denote by $[\omega]$ the cohomology class of $\omega$.
+\end{definition}
+
+\end{document}
