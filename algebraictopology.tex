@@ -3,6 +3,7 @@
 \usepackage{amsthm}
 \usepackage{amssymb}
 \usepackage{enumitem}
+\usepackage{tikz-cd}
 
 \theoremstyle{definition}
 \newtheorem{definition}{Definition}[section]
@@ -57,5 +58,37 @@
     where closed means in the kernel of $d$ and exact means in the image of $d$.
     We denote by $[\omega]$ the cohomology class of $\omega$.
 \end{definition}
+
+\begin{center}
+\begin{tikzcd}[cells={nodes={minimum height=2em}}]
+   \dots \arrow[r] & V_{q-1} \arrow[r, "f_{i-1}"] & V_i \arrow[r, "f_i"] & V_{q+1} \arrow[r] & \dots
+\end{tikzcd}
+\end{center}
+
+\begin{center}
+\begin{tikzcd}[cells={nodes={minimum height=2em}}]
+   0 \arrow[r] & A \arrow[r] & B \arrow[r] & B \arrow[r] & 0
+\end{tikzcd}
+\end{center}
+
+\begin{center}
+\begin{tikzcd}[cells={nodes={minimum height=2em}}]
+   0 \arrow[r] & A \arrow[r, "f"] & B \arrow[r, "g"] & B \arrow[r] & 0
+\end{tikzcd}
+\end{center}
+
+\begin{center}
+\begin{tikzcd}[cells={nodes={minimum height=2em}}]
+    H^{q+1}(A) \arrow[r, "f^*"] & ... & \\
+    H^q(A) \arrow[r, "f^*"] & H^q(B) \arrow[r, "g^*"] & H^q(C) \ar["d^*", out=90, in=270]{ull}
+\end{tikzcd}
+\end{center}
+
+\begin{center}
+\begin{tikzcd}[cells={nodes={minimum height=2em}}]
+    0 \arrow[r] & A^{q+1} \arrow[r,"f"] & B^{q+1} \arrow[r,"g"] & C^{q+1} \arrow[r] & 0\\
+    0 \arrow[r] & A^q \arrow[r,"f"] \arrow[u, "d"] & B^q \arrow[r,"g"] \arrow[u, "d"] & C^q \arrow[r] \arrow[u, "d"] & 0
+\end{tikzcd}
+\end{center}
 
 \end{document}
