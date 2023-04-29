@@ -58,37 +58,51 @@
     where closed means in the kernel of $d$ and exact means in the image of $d$.
     We denote by $[\omega]$ the cohomology class of $\omega$.
 \end{definition}
+\begin{definition}
+    A differential complex is a direct sum of Vector spaces $C = \oplus_{q\in\mathbb{Z}} C^q$ if there are homomorpisms
+    \begin{center}
+    \begin{tikzcd}[cells={nodes={minimum height=2em}}]
+       \dots \arrow[r] & C^{q-1} \arrow[r, "d"] & C^i \arrow[r, "d"] & C^{q+1} \arrow[r] & \dots
+    \end{tikzcd}
+    \end{center}
+    with $d^2 = 0$. The cohomology of $C$ is given by $H(C) = \oplus_{q\in\mathbb{Z}} H^q(C)$, with
+    \begin{equation}
+        H^q(C) = (\textrm{ker } d \cap C^q)/(\textrm{im } d \cap C^q).
+    \end{equation}
+    A map $f: A \rightarrow B$ between two differential complexes is a chain map it it commutes with the differential operators of A and B, $fd_A=d_Bf$.
+    A sequence of vector spaces
+    \begin{center}
+    \begin{tikzcd}[cells={nodes={minimum height=2em}}]
+       \dots \arrow[r] & V_{q-1} \arrow[r, "f_{i-1}"] & V_i \arrow[r, "f_i"] & V_{q+1} \arrow[r] & \dots
+    \end{tikzcd}
+    \end{center}
+    is said to be exact if the image of $f_{i-1}$ is the kernel of $f_{i}$.
+    An exact sequence of the form
+    \begin{center}
+    \begin{tikzcd}[cells={nodes={minimum height=2em}}]
+       0 \arrow[r] & A \arrow[r, "f"] & B \arrow[r, "g"] & C \arrow[r] & 0
+    \end{tikzcd}
+    \end{center}
+    is called a short exact sequence. Note that $f$ is injective and $g$ surjective.
+    If $f$, $g$ are chain maps, there is a long exact sequence of cohomology groups
+    \begin{center}
+    \begin{tikzcd}[cells={nodes={minimum height=2em}}]
+        H^{q+1}(A) \arrow[r, "f^*"] & ... & \\
+        H^q(A) \arrow[r, "f^*"] & H^q(B) \arrow[r, "g^*"] & H^q(C) \ar["d^*", out=90, in=270]{ull}
+    \end{tikzcd}
+    \end{center}
+    $f^*$, $g^*$ are the naturally induced maps and $d^*[c]$ is obtained through the commutative diagram
+    \begin{center}
+    \begin{tikzcd}[cells={nodes={minimum height=2em}}]
+        0 \arrow[r] & A^{q+1} \arrow[r,"f"] & B^{q+1} \arrow[r,"g"] & C^{q+1} \arrow[r] & 0\\
+        0 \arrow[r] & A^q \arrow[r,"f"] \arrow[u, "d"] & B^q \arrow[r,"g"] \arrow[u, "d"] & C^q \arrow[r] \arrow[u, "d"] & 0
+    \end{tikzcd}
+    \end{center}
+    Since $g$ is surjective there is $b\in B^q$ with $g(b)=c$. Because $g(db)=d(gb)=dc=0$, there is $a\in A^{q+1}$ with $db=f(a)$.
+Then $d^*[c] := [a]$. $a$ is closed because $f$ is injective. To see that the sequence is exact, note that if $b$ is closed then $f(a) = 0$, and due to injectivity $a = 0$.
+    On the other hand, $f(a)$ is exact and therefore $[f(a)] = 0$.
+\end{definition}
 
-\begin{center}
-\begin{tikzcd}[cells={nodes={minimum height=2em}}]
-   \dots \arrow[r] & V_{q-1} \arrow[r, "f_{i-1}"] & V_i \arrow[r, "f_i"] & V_{q+1} \arrow[r] & \dots
-\end{tikzcd}
-\end{center}
 
-\begin{center}
-\begin{tikzcd}[cells={nodes={minimum height=2em}}]
-   0 \arrow[r] & A \arrow[r] & B \arrow[r] & B \arrow[r] & 0
-\end{tikzcd}
-\end{center}
-
-\begin{center}
-\begin{tikzcd}[cells={nodes={minimum height=2em}}]
-   0 \arrow[r] & A \arrow[r, "f"] & B \arrow[r, "g"] & B \arrow[r] & 0
-\end{tikzcd}
-\end{center}
-
-\begin{center}
-\begin{tikzcd}[cells={nodes={minimum height=2em}}]
-    H^{q+1}(A) \arrow[r, "f^*"] & ... & \\
-    H^q(A) \arrow[r, "f^*"] & H^q(B) \arrow[r, "g^*"] & H^q(C) \ar["d^*", out=90, in=270]{ull}
-\end{tikzcd}
-\end{center}
-
-\begin{center}
-\begin{tikzcd}[cells={nodes={minimum height=2em}}]
-    0 \arrow[r] & A^{q+1} \arrow[r,"f"] & B^{q+1} \arrow[r,"g"] & C^{q+1} \arrow[r] & 0\\
-    0 \arrow[r] & A^q \arrow[r,"f"] \arrow[u, "d"] & B^q \arrow[r,"g"] \arrow[u, "d"] & C^q \arrow[r] \arrow[u, "d"] & 0
-\end{tikzcd}
-\end{center}
 
 \end{document}
