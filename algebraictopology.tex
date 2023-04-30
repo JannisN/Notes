@@ -2,6 +2,7 @@
 \usepackage[a4paper, total={7.5in, 10.7in}]{geometry}
 \usepackage{amsthm}
 \usepackage{amssymb}
+\usepackage{amsmath}
 \usepackage{enumitem}
 \usepackage{tikz-cd}
 
@@ -10,6 +11,8 @@
 \newtheorem{theorem}[definition]{Theorem}
 \newtheorem{lemma}[definition]{Lemma}
 \newtheorem{proposition}[definition]{Proposition}
+\theoremstyle{remark}
+\newtheorem*{remark}{Remark}
 
 \begin{document}
 
@@ -58,6 +61,16 @@
     where closed means in the kernel of $d$ and exact means in the image of $d$.
     We denote by $[\omega]$ the cohomology class of $\omega$.
 \end{definition}
+\begin{remark}
+    Only the constant functions are relevant for $\mathbb{R}^n$,
+    \begin{equation}
+        H^*(\mathbb{R}^n) =
+        \begin{cases}
+            R & \textrm{in dimension 0,}\\
+            0 & \textrm{otherwise.}
+        \end{cases}
+    \end{equation}
+\end{remark}
 \begin{definition}
     A differential complex is a direct sum of Vector spaces $C = \oplus_{q\in\mathbb{Z}} C^q$ if there are homomorpisms
     \begin{center}
@@ -99,9 +112,25 @@
     \end{tikzcd}
     \end{center}
     Since $g$ is surjective there is $b\in B^q$ with $g(b)=c$. Because $g(db)=d(gb)=dc=0$, there is $a\in A^{q+1}$ with $db=f(a)$.
-Then $d^*[c] := [a]$. $a$ is closed because $f$ is injective. To see that the sequence is exact, note that if $b$ is closed then $f(a) = 0$, and due to injectivity $a = 0$.
+    Then $d^*[c] := [a]$. $a$ is closed because $f$ is injective. To see that the sequence is exact, note that if $b$ is closed then $f(a) = 0$, and due to injectivity $a = 0$.
     On the other hand, $f(a)$ is exact and therefore $[f(a)] = 0$.
 \end{definition}
+\begin{definition}
+    $\Omega_c^*(\mathbb{R}^n)$ is the de Rham complex for functions of compact support,
+    $H_c^*(\mathbb{R})$ is its cohomology.
+\end{definition}
+\begin{remark}
+    Only the $n$-forms whose integrals are different from zero are relevant,
+    since if it was zero then its antiderivative can have compact support,
+    \begin{equation}
+        H_c^*(\mathbb{R}^n) =
+        \begin{cases}
+            R & \textrm{in dimension n,}\\
+            0 & \textrm{otherwise.}
+        \end{cases}
+    \end{equation}
+\end{remark}
+
 
 
 
