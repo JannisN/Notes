@@ -130,6 +130,45 @@
         \end{cases}
     \end{equation}
 \end{remark}
+\begin{definition}
+    $f: \mathbb{R}^m \rightarrow \mathbb{R}^n$ induces a pullback on functions
+    \begin{equation}
+        f^*(g) = g \circ f.
+    \end{equation}
+    On forms the pullback is defined as
+    \begin{equation}
+        f^*(\sum g_I dy_{i_1} \dots dy_{i_q}) = \sum(g_I \circ f) df_{i_1} \dots df_{i_q},
+    \end{equation}
+    with $f_i = y_i \circ f$ the i-th component of $f$, $y_i$ the standard coordinates.
+\end{definition}
+\begin{proposition}
+    $f^*$ commutes with $d$.
+\end{proposition}
+\begin{definition}
+    Let $M = U \cup V$ with $U, V$ open. Then we have the inclusions
+    \begin{equation}
+        M \leftarrow U \sqcup V \leftarrow U \cap V
+    \end{equation}
+    where $\sqcup$ is the disjoint union(each element has a label indicating wether it's from $U$ or $V$).
+    Using the inclusions as pushforwards we get
+    \begin{equation}
+        \Omega^*(M) \rightarrow \Omega^*(U) \oplus \Omega^*(V) \rightarrow \Omega^*(U \cap V).
+    \end{equation}
+    The Mayer-Vietoris sequence is given by
+    \begin{equation}
+        0 \rightarrow \Omega^*(M) \rightarrow \Omega^*(U) \oplus \Omega^*(V) \rightarrow \Omega^*(U \cap V) \rightarrow 0,
+    \end{equation}
+    with
+    \begin{equation}
+        \Omega^*(U) \oplus \Omega^*(V) \rightarrow \Omega^*(U \cap V); (\omega, \tau) \mapsto \tau - \omega.
+    \end{equation}
+\end{definition}
+\begin{proposition}
+    They Mayer-Vietoris sequence is exact. This is achieved through partitions of unity $\rho$,
+    \begin{equation}
+        (\rho_U f) - (-\rho_V f) = f.
+    \end{equation}
+\end{proposition}
 
 
 
