@@ -164,12 +164,28 @@
     \end{equation}
 \end{definition}
 \begin{proposition}
-    They Mayer-Vietoris sequence is exact. This is achieved through partitions of unity $\rho$,
+    The Mayer-Vietoris sequence is exact. This is achieved through partitions of unity $\rho$,
     \begin{equation}
-        (\rho_U f) - (-\rho_V f) = f.
+        (\rho_U \omega) - (-\rho_V \omega) = \omega.
     \end{equation}
 \end{proposition}
-
+\begin{definition}
+    The Mayer-Vietoris sequence induces a long exact sequence with the same name:
+    \begin{center}
+    \begin{tikzcd}
+        H^{q+1}(M) \arrow[r] & H^{q+1}(U) \oplus H^{q+1}(V) \arrow[r] & H^{q+1}(U \cap V) \\
+        H^q(M) \arrow[r] & H^q(U) \oplus H^q(V) \arrow[r] & H^q(U \cap V) \ar["d^*"]{ull}
+    \end{tikzcd}
+    \end{center}
+    Explicitly
+    \begin{equation}
+        d^*[\omega] = 
+        \begin{cases}
+            [-d(\rho_V\omega)] & \textrm{on } U,\\
+            [d(\rho_U\omega)] & \textrm{on } V.
+        \end{cases}
+    \end{equation}
+\end{definition}
 
 
 
