@@ -186,6 +186,43 @@
         \end{cases}
     \end{equation}
 \end{definition}
+\begin{definition}
+    If $j: U \rightarrow M$ is the inclusion of $U$ in $M$, then let $j_*: \Omega^*_c(U) \rightarrow \Omega^*_c(M)$ the map which extends a form to $M$ by zero.
+    Because pullbacks of compact forms are in general not compact, we instead use the inclusions
+
+    \begin{center}
+    \begin{tikzcd}
+       \Omega^*_c(M) & \arrow[l, "\textrm{sum}"] \Omega^*_c(U) \oplus \Omega^*_c(V) & \arrow[l, "\delta"] \Omega^*_c(U \cap V)
+    \end{tikzcd}
+    \end{center}
+    \begin{equation}
+        \delta: \omega \mapsto (-j_*\omega, j_*\omega).
+    \end{equation}
+    We then get the Mayer-Vietoris sequence
+    \begin{equation}
+        0 \leftarrow \Omega^*_c(M) \leftarrow \Omega^*_c(U) \oplus \Omega^*_c(V) \leftarrow \Omega^*_c(U \cap V) \leftarrow 0,
+    \end{equation}
+    which induces
+    \begin{center}
+    \begin{tikzcd}
+        H^{q+1}_c(M) & \arrow[l] H^{q+1}_c(U) \oplus H^{q+1}_c(V) & \arrow[l] H^{q+1}_c(U \cap V)\\
+        H^q(M)_c \ar["d^*"]{urr} & \arrow[l] H^q_c(U) \oplus H^q_c(V) & \arrow[l] H^q_c(U \cap V)
+    \end{tikzcd}
+    \end{center}
+    and we now instead get
+    \begin{equation}
+        d^*[\omega] = 
+        \begin{cases}
+            [d(\rho_U\omega)] & \textrm{on } U,\\
+            [d(\rho_V\omega)] & \textrm{on } V.
+        \end{cases}
+    \end{equation}
+\end{definition}
+\begin{proposition}
+    The Mayer-Vietoris sequence of forms with compact support is exact.
+\end{proposition}
+
+
 
 
 
