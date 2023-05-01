@@ -206,7 +206,7 @@
     \begin{center}
     \begin{tikzcd}
         H^{q+1}_c(M) & \arrow[l] H^{q+1}_c(U) \oplus H^{q+1}_c(V) & \arrow[l] H^{q+1}_c(U \cap V)\\
-        H^q(M)_c \ar["d^*"]{urr} & \arrow[l] H^q_c(U) \oplus H^q_c(V) & \arrow[l] H^q_c(U \cap V)
+        H^q_c(M) \ar["d^*"]{urr} & \arrow[l] H^q_c(U) \oplus H^q_c(V) & \arrow[l] H^q_c(U \cap V)
     \end{tikzcd}
     \end{center}
     and we now instead get
@@ -221,6 +221,26 @@
 \begin{proposition}
     The Mayer-Vietoris sequence of forms with compact support is exact.
 \end{proposition}
+\begin{proposition}
+    A manifold of dimension $n$ is orientable iff it has a global nowhere vanishing $n$-form.
+\end{proposition}
+\begin{definition}
+    Let $\mathbb{H}^n = \{x_n \geq 0 \} \subset \mathbb{R}^n$ with standard orientation $dx_1\dots dx_n$.
+    The induced orientation of $\partial \mathbb{H}^n = \{x_n=0\}$ is given by the equivalence class of $(-1)^n dx_1 \dots dx_{n-1}$.
+    For an orientation-preserving diffeomorphism $\phi$ we define for manifolds
+    \begin{equation}
+        [\partial M] = \phi^*[\partial \mathbb{H}^n].
+    \end{equation}
+\end{definition}
+\begin{remark}
+    This definition is due to $\omega|_{\partial M} := i_{\hat{n}} \omega$ for the normal $\hat{n}$.
+\end{remark}
+\begin{theorem}[Stokes']
+    Let $\omega$ be an $(n-1)$-form with compact support on an oriented manifold $M$, then
+    \begin{equation}
+        \int_M d\omega = \int_{\partial M} \omega.
+    \end{equation}
+\end{theorem}
 
 
 
