@@ -11,6 +11,7 @@
 \newtheorem{theorem}[definition]{Theorem}
 \newtheorem{lemma}[definition]{Lemma}
 \newtheorem{proposition}[definition]{Proposition}
+\newtheorem{corollary}[definition]{Corollary}
 \theoremstyle{remark}
 \newtheorem*{remark}{Remark}
 
@@ -142,7 +143,7 @@
     with $f_i = y_i \circ f$ the i-th component of $f$, $y_i$ the standard coordinates.
 \end{definition}
 \begin{proposition}
-    $f^*$ commutes with $d$.
+    $f^*$ commutes with $d$. This shows that the cohomology is a diffeomorphism invariant.
 \end{proposition}
 \begin{definition}
     Let $M = U \cup V$ with $U, V$ open. Then we have the inclusions
@@ -150,7 +151,7 @@
         M \leftarrow U \sqcup V \leftarrow U \cap V
     \end{equation}
     where $\sqcup$ is the disjoint union(each element has a label indicating wether it's from $U$ or $V$).
-    Using the inclusions as pushforwards we get
+    Using the inclusions as pullbacks we get
     \begin{equation}
         \Omega^*(M) \rightarrow \Omega^*(U) \oplus \Omega^*(V) \rightarrow \Omega^*(U \cap V).
     \end{equation}
@@ -242,6 +243,40 @@
     \end{equation}
 \end{theorem}
 
+\begin{definition}
+    Let $\pi: \mathbb{R}^n \times \mathbb{R}^1 \rightarrow \mathbb{R}^n;\, \pi(x, t) = x$ and
+    $s: \mathbb{R}^n \rightarrow \mathbb{R}^n \times \mathbb{R}^1;\, s(x) = (x, 0)$.
+    Trivially $\pi \circ s = 1$, $s^* \circ \pi^* = 1$, but $s \circ \pi \neq 1$.
+    $K$ is called a homotopy operator if
+    \begin{equation}
+        1 - \pi^* \circ s^* = \pm(dK \pm Kd).
+    \end{equation}
+    $dK \pm Kd$ maps closed forms to exact forms, therefore induces zero in cohomology.
+    If $K$ exists, $\pi^* \circ s^*$ is said to be chain homotopic to the identity.
+    We define $K: \Omega^q(\mathbb{R}^n \times \mathbb{R}) \rightarrow \Omega^{q-1}(\mathbb{R}^n \times \mathbb{R})$ by
+    \begin{equation}
+        (\pi^* \phi)f(x, t) \mapsto 0,\quad
+        (\pi^* \phi)f(x, t) dt \mapsto (\pi^* \phi) \int^t_0 dt\, f
+    \end{equation}
+    with $\phi$ a form on $\mathbb{R}^n$.
+\end{definition}
+\begin{proposition}
+    $K$ is a homotopy operator.
+    The maps $\pi^*$, $s^*$ on $H^*(\mathbb{R}^n \times \mathbb{R}) \leftrightarrow H^*(\mathbb{R}^n)$ are isomorphisms.
+\end{proposition}
+\begin{corollary}[Poincaré Lemma]
+    \begin{equation}
+        H^*(\mathbb{R}^n) =
+        \begin{cases}
+            R & \textrm{in dimension 0,}\\
+            0 & \textrm{otherwise.}
+        \end{cases}
+    \end{equation}
+    More generally $H^*(M \times \mathbb{R}^1) \simeq H^*(M)$.
+\end{corollary}
+\begin{corollary}[Homotopy Axiom for de Rham Cohomology]
+    Homotopic maps induce the same map in cohomology.
+\end{corollary}
 
 
 
