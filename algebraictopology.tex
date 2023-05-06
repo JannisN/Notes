@@ -277,6 +277,31 @@
 \begin{corollary}[Homotopy Axiom for de Rham Cohomology]
     Homotopic maps induce the same map in cohomology.
 \end{corollary}
+\begin{definition}
+    Two Manifolds $M$, $N$ have the same homotopy type if there are $C^\infty$ maps
+    $f: M \rightarrow N$, $g: N \rightarrow M$ such that $g \circ f$, $f \circ g$ are $C^\infty$
+    homotopic to the identity on $M$, $N$ respectively. A manifold is called contractible if it has the homotopy type of a point.
+\end{definition}
+\begin{corollary}
+    Manifolds with the same homotopy type have the same de Rham cohomology.
+\end{corollary}
+\begin{definition}
+    $r: M \rightarrow A$ is called a retraction of $M$ onto $A$ if $r \circ i: A \rightarrow A$ is the identity,
+    with $i: A \subset M$ the inclusion. If $i \circ r: M \rightarrow M$ is homotopic to the identitiy on M,
+    then r is called a deformation retraction of $M$ onto $A$, and it follows that $M$, $A$ have the same homotopy type.
+\end{definition}
+\begin{corollary}
+    If $A$ is a deformation retract of $M$, then $A$, $M$ have the same de Rham cohomology.
+\end{corollary}
+\begin{corollary}
+    \begin{equation}
+        H^*(S^n) =
+        \begin{cases}
+            R & \textrm{in dimension 0, n}\\
+            0 & \textrm{otherwise.}
+        \end{cases}
+    \end{equation}
+\end{corollary}
 
 
 
