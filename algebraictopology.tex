@@ -302,6 +302,38 @@
         \end{cases}
     \end{equation}
 \end{corollary}
+\begin{definition}
+    Let $\pi: M \times \mathbb{R}^1 \rightarrow M$ be the projection.
+    We define the push-forward for compact forms $\pi_*: \Omega_c^*(M \times \mathbb{R}^1) \rightarrow \Omega^{*-1}_c(M)$, called integration along the fiber by
+    \begin{equation}
+        \pi^*\phi f(x, t) \mapsto 0, \quad \pi^*\phi f(x, t) dt \mapsto \phi \int^\infty_{-\infty} dt\,f
+    \end{equation}
+    where $\phi$ is a form on $M$. Let $e = e(t) dt$ be a compactly supported 1-form on $\mathbb{R}^1$ with total integral 1 and define
+    \begin{equation}
+        e_*: \Omega^*_c(M) \rightarrow \Omega^{*+1}_c(M\times \mathbb{R}^1); \quad \phi \rightarrow (\pi^*\phi) \wedge e.
+    \end{equation}
+    The homotopy operator $K: \Omega_c^*(M \times \mathbb{R}^1) \rightarrow\Omega_c^{*-1}(M \times \mathbb{R}^1)$ is defined by
+    \begin{equation}
+        \pi^*\phi f \mapsto 0, \quad \pi^*\phi f dt \mapsto \pi^*\phi \int^t_{-\infty} f - \pi^*\phi \int^t_{-\infty} e \int^\infty_{-\infty}f.
+    \end{equation}
+\end{definition}
+\begin{proposition}
+    $d$ commutes with both $\pi_*$ and $e_*$.
+\end{proposition}
+\begin{proposition}
+    $1 - e_* \pi_* = (-1)^{q-1}(dK - Kd)$ on $\Omega^q_c(M \times \mathbb{R}^1)$.
+    The maps $H_c^*(M\times \mathbb{R}^1) \leftrightarrow H_d^{*-1}(M)$ are isomorphisms.
+\end{proposition}
+\begin{corollary}[Poincaré Lemma for Compact Supports]
+    \begin{equation}
+        H^*_c(\mathbb{R}^n) =
+        \begin{cases}
+            R & \textrm{in dimension n}\\
+            0 & \textrm{otherwise.}
+        \end{cases}
+    \end{equation}
+    The generator is an $n$-form of compact support with integral 1.
+\end{corollary}
 
 
 
