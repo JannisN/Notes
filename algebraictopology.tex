@@ -190,7 +190,6 @@
 \begin{definition}
     If $j: U \rightarrow M$ is the inclusion of $U$ in $M$, then let $j_*: \Omega^*_c(U) \rightarrow \Omega^*_c(M)$ the map which extends a form to $M$ by zero.
     Because pullbacks of compact forms are in general not compact, we instead use the inclusions
-
     \begin{center}
     \begin{tikzcd}
        \Omega^*_c(M) & \arrow[l, "\textrm{sum}"] \Omega^*_c(U) \oplus \Omega^*_c(V) & \arrow[l, "\delta"] \Omega^*_c(U \cap V)
@@ -334,7 +333,26 @@
     \end{equation}
     The generator is an $n$-form of compact support with integral 1.
 \end{corollary}
-
+\begin{definition}
+    A map is proper if the inverse image of every compact set is compact.
+\end{definition}
+\begin{theorem}[Sard's]
+    The set of critical values of a smooth map $f: M \rightarrow N$ has measure zero.
+\end{theorem}
+\begin{definition}
+    Let $f: \mathbb{R}^n \rightarrow \mathbb{R}^n$ be proper. Let $\alpha$ be a generator
+    of $H^n_c(\mathbb{R}^n)$(integrates to 1), then
+    \begin{equation}
+        \textrm{deg }f = \int_{\mathbb{R}^n} f^*\alpha
+    \end{equation}
+    is the degree of $f$.
+\end{definition}
+\begin{proposition}
+    Let $f: \mathbb{R}^n \rightarrow \mathbb{R}^n$ be proper. If $f$ is not surjective, then it has degree 0.
+\end{proposition}
+\begin{theorem}
+    Let $f: \mathbb{R}^n \rightarrow \mathbb{R}^n$ be proper. The degree of $f$ is an integer.
+\end{theorem}
 
 
 
