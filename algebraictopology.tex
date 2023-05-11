@@ -5,6 +5,8 @@
 \usepackage{amsmath}
 \usepackage{enumitem}
 \usepackage{tikz-cd}
+\tikzcdset{scale cd/.style={every label/.append style={scale=#1},
+    cells={nodes={scale=#1}}}}
 
 \theoremstyle{definition}
 \newtheorem{definition}{Definition}[section]
@@ -371,6 +373,26 @@
 \end{proposition}
 \begin{lemma}
     The pairing $\left\langle \,,\,\right\rangle : V \otimes  W \rightarrow \mathbb{R}$ for finite vector spaces is nondegenerate iff $v \mapsto\left\langle v,\,  \right\rangle$ is an isomorphism $V\rightarrow W^*$.
+\end{lemma}
+\begin{lemma}
+    Given a commutative diagram of Abelian groups and group homomorphisms
+    \begin{center}
+    \begin{tikzcd}[cells={nodes={minimum height=2em}}]
+        A \arrow[r] \arrow[d, "a"] & B \arrow[r] \arrow[d, "b"] & C \arrow[r] \arrow[d, "c"] & D \arrow[r] \arrow[d, "d"] & E \arrow[d, "e"]\\
+        A' \arrow[r] & B' \arrow[r] & C' \arrow[r] & D' \arrow[r] & E'
+    \end{tikzcd}
+    \end{center}
+    where the rows are exact, if $a, b, d, e$ are isomorphisms, so is $c$.
+\end{lemma}
+\begin{lemma}
+    The Mayer-Vietoris sequences may be paired together to form a sign-commutative diagram
+    \begin{center}
+    \begin{tikzcd}[scale cd=0.8, column sep=0.5em, row sep=2em]
+        H^q(U\cup V) \arrow[r] \arrow[d, "\otimes", phantom] & H^q(U) \oplus H^q(V) \arrow[r] \arrow[d, "\otimes", phantom] & H^q(U\cap V) \arrow[r, "d^*"] \arrow[d, "\otimes", phantom] & H^{q+1}(U\cup V) \arrow[d, "\otimes", phantom] \\
+        H_c^{n-q}(U\cup V) \arrow[d, "\int_{U\cup V}"] & H_c^{n-q}(U) \oplus H_c^{n-q}(V) \arrow[l] \arrow[d, "\int_U + \int_V"] & H_c^{n-q}(U\cap V) \arrow[l] \arrow[d, "\int_{U\cap V}"] & H^{n-q-1}_c(U\cup V) \arrow[l, "d_*"] \arrow[d, "\int_{U\cup V}"]  \\
+        \mathbb{R} & \mathbb{R} & \mathbb{R} & \mathbb{R}                     
+    \end{tikzcd}
+    \end{center}
 \end{lemma}
 
 
