@@ -215,7 +215,7 @@
     \begin{equation}
         d^*[\omega] = 
         \begin{cases}
-            [d(\rho_U\omega)] & \textrm{on } U,\\
+            [-d(\rho_U\omega)] & \textrm{on } U,\\
             [d(\rho_V\omega)] & \textrm{on } V.
         \end{cases}
     \end{equation}
@@ -393,7 +393,33 @@
         \mathbb{R} & \mathbb{R} & \mathbb{R} & \mathbb{R}                     
     \end{tikzcd}
     \end{center}
+    where sign-commutativity means that
+    \begin{equation}
+        \int_{U\cap V} \omega\wedge d_* \tau = \pm \int_{U \cup V}(d^*\omega)\wedge \tau,
+    \end{equation}
+    with $\omega \in H^q(U\cap V), \tau \in H_c^{n-q-1}(U\cup V)$.
+    This is equivalent to the sign-commutative diagram
+    \begin{center}
+    \begin{tikzcd}[column sep=0.8em]
+        H^q(U\cup V) \arrow[r] \arrow[d] & H^q(U) \oplus H^q(V) \arrow[r] \arrow[d] & H^q(U\cap V) \arrow[d] \\
+        H_c^{n-q}(U\cup V)^* \arrow[r] & H_c^{n-q}(U)^* \oplus H_c^{n-q}(V)^* \arrow[r] & H_c^{n-q}(U\cap V)^* \\
+    \end{tikzcd}
+    \end{center}
 \end{lemma}
+\begin{theorem}[Poincaré Duality]
+    If $M$ is orientable and has a finite good cover, then
+    \begin{equation}
+        \int H^q(M) \otimes H_c^{n-q}(M) \rightarrow \mathbb{R}
+    \end{equation}
+    is nondegenerate, or equivalently
+    \begin{equation}
+        H^q(M) \simeq (H_c^{n-q}(M))^*.
+    \end{equation}
+\end{theorem}
+\begin{corollary}
+    If $M$ is connected, oriented with dimension $n$, then $H^n_c(M) \simeq \mathbb{R}$.
+    If M is also compact then $H^n(M) \simeq \mathbb{R}$.
+\end{corollary}
 
 
 
