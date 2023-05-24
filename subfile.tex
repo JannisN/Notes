@@ -7,6 +7,7 @@
 \newtheorem{definition}{Definition}[section]
 \newtheorem{theorem}[definition]{Theorem}
 \newtheorem{lemma}[definition]{Lemma}
+\newtheorem{corollary}[definition]{Corollary}
 
 \begin{document}
 
@@ -113,7 +114,6 @@
 \begin{theorem}
     Let $Y$ be a subspace of $X$, $A$ a subset of $Y$. Then $\overline{A}_Y = \overline{A}_X \cap Y$.
 \end{theorem}
-
 \begin{theorem}
     Let $A$ be a subset of $X$.
     \setlist{nolistsep}
@@ -121,6 +121,38 @@
         \item Then $x \in \overline{A}$ iff every open set containing $x$ intersects $A$.
         \item If $X$ is given by a basis, then $x \in \overline{A}$ iff every basis element containing x intersects $A$.
     \end{enumerate}
+\end{theorem}
+\begin{definition}
+    $x \in X$ is called a limit point of $A \subset X$ if every neighborhood of $x$ intersects $A$
+    in some other point than $x$ itself, or equally if $x$ belongs to the closure of $A-\{x\}$.
+\end{definition}
+\begin{theorem}
+    Let $A'$ be the set of all limit points of $A\subset X$, then
+    \begin{equation}
+        \overline{A} = A \cup A'.
+    \end{equation}
+\end{theorem}
+\begin{corollary}
+    A subset of a topological space is closed iff it contains all its limit points.
+\end{corollary}
+\begin{definition}
+    A sequence $x_k$ converges to $x\in X$ if for each neighborhood $U$ of $x$ there is a positive integer $N$ such that for all $n\leq N$, $x_n \in U$.
+\end{definition}
+\begin{definition}
+    $X$ is called a Hausdorff space if for each $x_1 \neq x_2$ there are neighborhoods of $x_1$ and $x_2$ respectively that are disjoint.
+    It is called $T_1$ if all finite point sets are closed.
+\end{definition}
+\begin{theorem}
+    Every finite point set in a Hausdorff space is closed, so it is $T_1$.
+\end{theorem}
+\begin{theorem}
+    Let $X$ be $T_1$, then $x$ is a limit point of $A$ iff every neighborhood of $x$ contains infinitely many points of $A$.
+\end{theorem}
+\begin{theorem}
+    A sequence in a Hausdorff space converges to at most one point. 
+\end{theorem}
+\begin{theorem}
+    The product of two Hausdorff spaces is Hausdorff, so is a subspace of a Hausdorff space.
 \end{theorem}
 
 \end{document}
