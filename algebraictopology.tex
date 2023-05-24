@@ -421,6 +421,47 @@
     If M is also compact then $H^n(M) \simeq \mathbb{R}$.
 \end{corollary}
 
-
+\begin{definition}
+    Let $G$ be a topological group acting effectively(only $1\in G$ acts trivially) on a space $F$ on the left. A surjection $\pi: E \rightarrow B$ between topological spaces is a fiber bundle with fiber $F$
+    and structure group $G$(also called a $G$-bundle) if $B$ has an open cover $\{U_a\}$ such that there are fiber-preserving homeomorphisms
+    \begin{equation}
+        \phi_a : E |_{U_a} \mapsto U_a \times F
+    \end{equation}
+    and continuous transition functions with values in $G$
+    \begin{equation}
+        g_{ab} = \phi_a\phi_b^{-1} |_{\{x\} \times F} \in G.
+    \end{equation}
+    $E_x = \pi^{-1}(x)$ is called the fiber at x. $E, B$ are called total and base space respectively.
+    If $G$ is not explicitely defined then it is understood to be the group of diffeomorphisms of $F$.
+\end{definition}
+\begin{remark}
+    The transition functions satisfy the cocycle condition
+    \begin{equation}
+        g_{ab} \cdot g_{bc} = g_{ac}.
+    \end{equation}
+    Given a cocycle $\{g_{ab}\}$ we can construct a fiber bundle with $\{g_{ab}\}$ as its transition function,
+    \begin{equation}
+        E=\left(\coprod U_a \times F\right) / (x, y) \sim (x, g_{ab}(x)y).
+    \end{equation}
+\end{remark}
+\begin{theorem}[Künneth Formula]
+    For two manifolds $M$, $F$, with at least one having a good finite cover, we have
+    \begin{equation}
+        H^*(M\times F) = H^*(M) \otimes H^*(F),
+    \end{equation}
+    which means
+    \begin{equation}
+        H^n(M\times F) = \oplus_{p+q=n}\, H^p(M) \otimes H^q(F).
+    \end{equation}
+    Also holds in the compact cohomology case.
+\end{theorem}
+\begin{theorem}[Leray-Hirsch]
+    Let $E$ be a fiber bundle over M with fiber $F$. Suppose $M$ has a finite good cover.
+    If there are global cohomology classes $e_1, \dots, e_r$ on $E$ which restricted to each fiber freely generate
+    the cohomology of the fiber, then $H^*(E)$ is a free module over $H^*(M)$ with basis $\{e_1, \dots, e_r\}$ meaning that
+    \begin{equation}
+        H^*(E) \simeq H^*(M) \otimes \mathbb{R}\{e_1, \dots, e_r\} \simeq H^*(M) \otimes H^*(F).
+    \end{equation}
+\end{theorem}
 
 \end{document}
