@@ -425,9 +425,9 @@
     Let $G$ be a topological group acting effectively(only $1\in G$ acts trivially) on a space $F$ on the left. A surjection $\pi: E \rightarrow B$ between topological spaces is a fiber bundle with fiber $F$
     and structure group $G$(also called a $G$-bundle) if $B$ has an open cover $\{U_a\}$ such that there are fiber-preserving homeomorphisms
     \begin{equation}
-        \phi_a : E |_{U_a} \mapsto U_a \times F
+        \phi_a : E |_{U_a} \mapsto U_a \times F,
     \end{equation}
-    and continuous transition functions with values in $G$
+    called trivialisations, and continuous transition functions with values in $G$
     \begin{equation}
         g_{ab} = \phi_a\phi_b^{-1} |_{\{x\} \times F} \in G.
     \end{equation}
@@ -463,5 +463,30 @@
         H^*(E) \simeq H^*(M) \otimes \mathbb{R}\{e_1, \dots, e_r\} \simeq H^*(M) \otimes H^*(F).
     \end{equation}
 \end{theorem}
+\begin{definition}
+    A (real) vector bundle of rank $n$ is a fiber bundle with fiber $\mathbb{R}^n$ and structure group $GL(n, \mathbb{R})$.
+    A section of the vector bundle $E$ over $U \subset B$ open is a map $s: U \rightarrow E$ such that $\pi \circ s$ is the identity on $U$.
+    The space of all sections over $U$ is denoted by $\Gamma(U, E)$.
+    A frame on $U$ is a collection of sections $s_1, \dots, s_n$ over $U$ such that they form a basis for each $E_x = \pi^{-1}(x),\, x\in U$.
+\end{definition}
+\begin{lemma}
+    If the cocycle $\{g_{ab}'\}$ comes from another trivialization, then there are maps $\lambda_a: U_a \rightarrow GL(n,\mathbb{R})$ such that
+    \begin{equation}
+        g_{ab} = \lambda_a g_{ab}' \lambda^{-1}_b.
+    \end{equation}
+    The two cocycles are then said to be equivalent.
+\end{lemma}
+\begin{proposition}
+    Two vector bundles on $M$ are isomorphic iff their cocycles are equivalent.
+\end{proposition}
+\begin{definition}
+    A bundle map is a fiber-preserving smooth map $f: E\rightarrow E'$ of vector bundles which is linear on the fibers.
+    If it is possible to find an equivalent cocycle with values in a subgroup $H \subset GL(n, \mathbb{R})$ we say that the structure group of $E$ may be reduced to $H$.
+    A vector bundle is orientable if its structure group may be reduced to $GL^+(n,\mathbb{R})$(determinants are positive).
+    A trivialisation is said to be oriented if the transition functions have positive determinant.
+\end{definition}
+\begin{proposition}
+    The structure group of a real vector bundle of rank $n$ can be reduced to $O(n)$. It can be reduced to $SO(n)$ iff the bundle is orientable.
+\end{proposition}
 
 \end{document}
