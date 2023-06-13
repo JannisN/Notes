@@ -155,4 +155,33 @@
     The product of two Hausdorff spaces is Hausdorff, so is a subspace of a Hausdorff space.
 \end{theorem}
 
+\begin{definition}
+    A function $f: X \rightarrow Y$ is called continuous if for every open $V \subset Y$, $f^{-1}(V)$ is open in $X$.
+    If $f$ is also a bijection and $f^{-1}$ is also continuous then $f$ is called a homeomorphism.
+\end{definition}
+\begin{theorem}
+    Let $f: X \rightarrow Y$, then the following are equivalent:
+    \setlist{nolistsep}
+    \begin{enumerate}[noitemsep]
+        \item $f$ is continuous.
+        \item For every subset $A \subset X$, $f(\overline{A}) \subset \overline{f(A)}$.
+        \item For every closed $B \subset Y$, $f^{-1}(B)$ is closed in $X$.
+        \item For every $x \in X$ and every neighborhood $V$ of $f(x)$ there is a neighborhood $U$ of $x$ with $f(U) \subset V$.
+    \end{enumerate}
+    If (4) holds for some point $x \in X$, then $f$ is called continuous at $x$.
+\end{theorem}
+\begin{definition}
+    Let $f: X \rightarrow Y$ be injective and continuous, then $f$ is called an imbedding if $f$ is a homeomorphism under the subspace topology $f(X) \subset Y$.
+\end{definition}
+\begin{theorem}
+    Constant functions, inclusions, composites of continuous functions, restriction of the domain or range of a continuous function to a subspace, are continuous.
+    If $f: X \rightarrow Y$ is continuous in the subspace topology when restricted to an open cover $f|U_a$, then $f$ is continuous.
+\end{theorem}
+\begin{theorem}[The pasting lemma]
+    Let $X = A \cup B$, with $A, B$ closed in $X$. Let $f: A \rightarrow Y$ and $g: B \rightarrow Y$ be continuous. If their values agree for every $x \in A \cap B$, then their combination to $X \rightarrow Y$ is continuous.
+\end{theorem}
+\begin{theorem}
+    Let $f: A \rightarrow X \times Y$ be given by $f(a) = (f_1(a), f_2(a))$. Then $f$ is continuous iff $f_1, f_2$ are continuous. Those are called the coordinate functions of $f$.
+\end{theorem}
+
 \end{document}
