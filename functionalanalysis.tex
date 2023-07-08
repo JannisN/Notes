@@ -1,0 +1,66 @@
+\documentclass[twocolumn]{article}
+\usepackage[a4paper, total={7.5in, 10.7in}]{geometry}
+\usepackage{amsthm}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{enumitem}
+\usepackage{tikz-cd}
+\tikzcdset{scale cd/.style={every label/.append style={scale=#1},
+    cells={nodes={scale=#1}}}}
+
+\theoremstyle{definition}
+\newtheorem{definition}{Definition}[section]
+\newtheorem{theorem}[definition]{Theorem}
+\newtheorem{lemma}[definition]{Lemma}
+\newtheorem{proposition}[definition]{Proposition}
+\newtheorem{corollary}[definition]{Corollary}
+\theoremstyle{remark}
+\newtheorem*{remark}{Remark}
+
+\begin{document}
+
+\section{Functional Analysis}
+
+\begin{definition}
+    A complex vector space $V$ is called an inner product space with an inner product
+    $(\cdot, \cdot)$ on $V \times V$ such that for all $x, y, z \in V,\, a \in \mathbb{C}$:
+    \setlist{nolistsep}
+    \begin{enumerate}[noitemsep]
+        \item $(x, x) \geq 0$, $(x, x) = 0$ iff $x = 0$
+        \item $(x, y + z) = (x, y) + (x, z)$
+        \item $(x, ay) = a(x, y)$
+        \item $(x, y) = \overline{(y, x)}$
+    \end{enumerate}
+\end{definition}
+\begin{definition}
+    Two vectors $x$, $y$ are called orthogonal if $(x, y) = 0$. An orthonormal set is a collection
+    of vectors that are mutually orthogonal and such that $\left\lVert x \right\rVert := \sqrt{(x, x)} = 1$ for all $x$.
+\end{definition}
+\begin{theorem}[Pythagorean]
+    Let $\{x_n \}_{n=1}^N$ be orthonormal, then for all $x \in V$
+    \begin{equation}
+        \left\lVert x\right\rVert^2 = \sum_{n=1}^N \left\lvert (x, x_n)\right\rvert^2 + \left\lVert x - \sum_{n=1}^N (x_n, x)x_n\right\rVert^2.
+    \end{equation}
+\end{theorem}
+\begin{corollary}[Bessel's inequality]
+    Let $\{x_n \}_{n=1}^N$ be orthonormal, then for all $x \in V$
+    \begin{equation}
+        \left\lVert x\right\rVert^2 \geq \sum_{n=1}^N \left\lvert (x, x_n)\right\rvert^2.
+    \end{equation}
+\end{corollary}
+\begin{corollary}[Schwarz inequality]
+    \begin{equation}
+        \left\lvert (x, y)\right\rvert \leq \left\lVert x\right\rVert \left\lVert y\right\rVert.
+    \end{equation}
+\end{corollary}
+\begin{remark}
+    Parallelogram law:
+    \begin{equation}
+        \left\lVert x + y\right\rVert + \left\lVert x - y\right\rVert = 2 \left\lVert x\right\rVert ^2 + 2 \left\lVert y\right\rVert ^2.
+    \end{equation}
+\end{remark}
+\begin{theorem}
+    Every inner product space is a normed linear space with norm $\left\lVert x \right\rVert := \sqrt{(x, x)}$.
+\end{theorem}
+
+\end{document}
