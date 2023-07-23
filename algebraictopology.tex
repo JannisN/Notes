@@ -489,4 +489,46 @@
     The structure group of a real vector bundle of rank $n$ can be reduced to $O(n)$. It can be reduced to $SO(n)$ iff the bundle is orientable.
 \end{proposition}
 
+\begin{definition}
+    The direct sum of two vector bundles over $M$ is the direct sum of the local vector spaces and trivialisations,
+    likewise for the tensor product. If
+    \begin{equation}
+        \phi_a : E|_{U_a} \mapsto U_a \times \mathbb{R}^n
+    \end{equation}
+    is a trivialisation for $E$, then
+    \begin{equation}
+        (\phi_a^T)^{-1} : E^*|_{U_a} \mapsto U_a \times \left(\mathbb{R}^n\right)^*
+    \end{equation}
+    is a trivialisation for $E^*$. The transition functions for $E^*$ are then
+    \begin{equation}
+        (\phi_a^T)^{-1} \phi_b^T = ((\phi_a \phi_b^{-1})^T)^{-1} = (g^T_{ab})^{-1}.
+    \end{equation}
+\end{definition}
+\begin{definition}
+    Let $M$ and $N$ be manifolds and $\pi: E \rightarrow M$ a vector bundle over $M$.
+    A map $f: N \rightarrow M$ induces a vector bundle $f^{1}E$ on $N$, called the pullback of $E$ by $f$.
+    This bundle is defined to be the subset of $N \times E$ given by
+    \begin{equation}
+        \{ (n, e) \mid  f(n) = \pi(e) \}.
+    \end{equation}
+    $\text{Vect}_k(M)$ are the isomorphism classes of rank $k$ real vector bundles over $M$.
+\end{definition}
+\begin{remark}
+    The transition functions for $f^{-1}E$ are the pullback functions $f^*g_{ab}$.
+    For the composition of two maps $g, f$ between three manifolds we have
+    \begin{equation}
+        (f \circ g)^{-1} E = g^{-1}(f^{-1}E).
+    \end{equation}
+\end{remark}
+\begin{theorem}[Homotopy Property of Vector Bundles]
+    Let $Y$ be a compact manifold. If $f_0$, $f_1$ are homotopic maps from $Y$ to $X$ and $E$ is a vector bundle on $X$,
+    then $f_0^{-1}$ and $f_1^{-1}$ are isomorphic.
+\end{theorem}
+\begin{corollary}
+    A vector bundle over a contractible manifold is trivial.
+\end{corollary}
+\begin{remark}
+    Also holds if compact is replaced by paracompact, and also for general topological spaces and continuous maps instead of manifolds and smooth maps.
+\end{remark}
+
 \end{document}
