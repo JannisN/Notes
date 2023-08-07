@@ -276,6 +276,7 @@
     More generally $H^*(M \times \mathbb{R}^1) \simeq H^*(M)$.
 \end{corollary}
 \begin{corollary}[Homotopy Axiom for de Rham Cohomology]
+    \label{homotopyAxiom}
     Homotopic maps induce the same map in cohomology.
 \end{corollary}
 \begin{definition}
@@ -530,5 +531,19 @@
 \begin{remark}
     Also holds if compact is replaced by paracompact, and also for general topological spaces and continuous maps instead of manifolds and smooth maps.
 \end{remark}
+
+\begin{remark}
+    Let $E$ be a vector bundle over $M$, then the zero section $x \mapsto (x, 0)$ embeds $M$ diffeomorphically in $E$.
+    Since $M \times \{0 \}$ is a deformation retract of $E$, it follows from corollary \ref{homotopyAxiom} that
+    \begin{equation}
+        H^*(E) \simeq H^*(M).
+    \end{equation}
+\end{remark}
+\begin{lemma}
+    An orientable vector bundle over a manifold is an orientable manifold.
+\end{lemma}
+\begin{proposition}
+    If $\pi: E \rightarrow M$ is an orientable vector bundle and $M$ is orientable of finite type, then $H_c^*(E) \simeq H_c^{*-n}(M)$.
+\end{proposition}
 
 \end{document}
