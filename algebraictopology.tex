@@ -261,6 +261,9 @@
     \end{equation}
     with $\phi$ a form on $\mathbb{R}^n$.
 \end{definition}
+\begin{remark}
+    $K$ can be used to calculate an inverse of $d$.
+\end{remark}
 \begin{proposition}
     $K$ is a homotopy operator.
     The maps $\pi^*$, $s^*$ on $H^*(\mathbb{R}^n \times \mathbb{R}) \leftrightarrow H^*(\mathbb{R}^n)$ are isomorphisms.
@@ -350,6 +353,11 @@
     \end{equation}
     is the degree of $f$.
 \end{definition}
+\begin{remark}
+    This is independent of the generator, as changing the generator from $\alpha_1$ to $\alpha_2$ can be done by adding $\alpha_2 - \alpha_1$.
+    As this term is exact, it is equal to some $d\beta$, whose integral vanishes by Stokes' theorem(because $\beta$ is compact).
+    Therefore, $\alpha_2$ also has an integral of 1, i.e. compact $n$-forms in $\mathbb{R}^n$ represent the same vector in the compact de Rahm cohomology iff their integral is the same.
+\end{remark}
 \begin{proposition}
     Let $f: \mathbb{R}^n \rightarrow \mathbb{R}^n$ be proper. If $f$ is not surjective, then it has degree 0.
 \end{proposition}
@@ -421,6 +429,9 @@
     If $M$ is connected, oriented with dimension $n$, then $H^n_c(M) \simeq \mathbb{R}$.
     If M is also compact then $H^n(M) \simeq \mathbb{R}$.
 \end{corollary}
+\begin{theorem}
+    Let $f: M \mapsto N$ be a map between two compact, oriented manifolds. Its degree is an integer, and is equal to the number of points in the inverse image of any regular point in $N$, counted with multiplicity $\pm 1$.
+\end{theorem}
 
 \begin{definition}
     Let $G$ be a topological group acting effectively(only $1\in G$ acts trivially) on a space $F$ on the left. A surjection $\pi: E \rightarrow B$ between topological spaces is a fiber bundle with fiber $F$
@@ -465,6 +476,17 @@
     \end{equation}
 \end{theorem}
 \begin{definition}
+    Let $M$ be an oriented manifold of dimension $n$, $S$ a closed oriented submanifold of dimension $k$,
+    and let $\omega$ be a closed $k$-form with compact support on $M$.
+    Integration over $S$ induces a linear functional on $H^k_c(M)$. The Poincaré dual $[\mu_S]$ of $S$ is then the Poincaré dual of the element in $H^k_c(M)$ dual to this functional.
+    By definition
+    \begin{equation}
+        \int_S i^* \omega = \int_M \omega \wedge \mu_S.
+    \end{equation}
+    One can demand the Poincaré dual of a compact $S$ to have compact support.
+\end{definition}
+
+\begin{definition}
     A (real) vector bundle of rank $n$ is a fiber bundle with fiber $\mathbb{R}^n$ and structure group $GL(n, \mathbb{R})$.
     A section of the vector bundle $E$ over $U \subset B$ open is a map $s: U \rightarrow E$ such that $\pi \circ s$ is the identity on $U$.
     The space of all sections over $U$ is denoted by $\Gamma(U, E)$.
@@ -507,7 +529,7 @@
 \end{definition}
 \begin{definition}
     Let $M$ and $N$ be manifolds and $\pi: E \rightarrow M$ a vector bundle over $M$.
-    A map $f: N \rightarrow M$ induces a vector bundle $f^{1}E$ on $N$, called the pullback of $E$ by $f$.
+    A map $f: N \rightarrow M$ induces a vector bundle $f^{-1}E$ on $N$, called the pullback of $E$ by $f$.
     This bundle is defined to be the subset of $N \times E$ given by
     \begin{equation}
         \{ (n, e) \mid  f(n) = \pi(e) \}.
